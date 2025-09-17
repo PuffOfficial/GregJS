@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.gregjs;
 
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;

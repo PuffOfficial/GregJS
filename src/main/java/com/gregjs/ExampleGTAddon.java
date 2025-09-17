@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.gregjs;
 
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;

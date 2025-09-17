@@ -33,6 +33,14 @@ repositories {
         }
     }
     maven {
+        name = 'KubeJS Maven'
+        url "https://maven.latvian.dev/releases"
+        content {
+            includeGroup "dev.latvian.mods"
+            includeGroup "dev.latvian.apps"
+        }
+    }
+    maven {
         name 'FirstDarkDev'
         url "https://maven.firstdark.dev/snapshots/"
     }
@@ -153,7 +161,7 @@ dependencies {
     modImplementation("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") { transitive = false }
     modImplementation("com.tterrag.registrate:Registrate:${registrate_version}")
     modImplementation("dev.toma.configuration:configuration-forge-${minecraft_version}:${configuration_version}")
-
+    modImplementation("com.latvian.mods:kubejs-forge:${kubejs_version}")
     // lombok
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
@@ -176,6 +184,7 @@ tasks.named('processResources', ProcessResources).configure {
             "forge_version": forge_version.split("\\.")[0], // only specify major version of forge
             "minecraft_version": minecraft_version,
             "gtceu_version": gtceu_version,
+            "kubejs_version": kubejs_version,
     ]
     inputs.properties(properties)
 
