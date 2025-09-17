@@ -33,12 +33,8 @@ repositories {
         }
     }
     maven {
-        name = 'KubeJS Maven'
-        url "https://maven.latvian.dev/releases"
-        content {
-            includeGroup "dev.latvian.mods"
-            includeGroup "dev.latvian.apps"
-        }
+        // latvian.dev Maven (KubeJS and Rhino)
+        url = "https://maven.latvian.dev/releases"
     }
     maven {
         name 'FirstDarkDev'
@@ -161,7 +157,8 @@ dependencies {
     modImplementation("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") { transitive = false }
     modImplementation("com.tterrag.registrate:Registrate:${registrate_version}")
     modImplementation("dev.toma.configuration:configuration-forge-${minecraft_version}:${configuration_version}")
-    modImplementation("com.latvian.mods:kubejs-forge:${kubejs_version}")
+    modImplementation("dev.latvian.mods:kubejs-forge:${kubejs_version}")
+    modImplementation("dev.latvian.mods:rhino-forge:${rhino_version}")
     // lombok
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
